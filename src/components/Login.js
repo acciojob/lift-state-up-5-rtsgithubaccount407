@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 
 const Login = ({ isLoggedIn, setIsLoggedIn }) => {
-  const [data, setData] = useState({ name: "", password: " " });
+    const [data, setData] = useState({ name: "", password: " " });
+    
   function handleChange(e) {
     setData({ ...data, [e.target.name]: e.target.value });
   }
   return (
     <>
+      isLoggedIn ?
+     
+      
+     (   <p>You are logged in!</p>) :(
+  
       <form action="">
         <div>
           <div>
@@ -31,7 +37,8 @@ const Login = ({ isLoggedIn, setIsLoggedIn }) => {
           </div>
           <button onClick={() => setIsLoggedIn(true)}>Login</button>
         </div>
-      </form>
+          </form>
+     )
     </>
   );
 };
